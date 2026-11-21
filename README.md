@@ -88,6 +88,30 @@ Confusion matrix:
 | benign | 0.99 | 0.99 | 0.99 |
 
 The notebook also shows the confusion matrix as a heatmap and the top 10 features by coefficient as a bar chart.
+### 5. Decision Tree Classifier on the Iris Dataset
+
+Predict the species of an iris flower from its measurements using a shallow, easy-to-read decision tree.
+
+- **Notebook:** `Decision_Tree_Classifier.ipynb`
+- **Dataset:** Iris dataset, built into scikit-learn (`sklearn.datasets.load_iris`), 150 samples, 4 features (sepal length, sepal width, petal length, petal width)
+- **Algorithm:** Decision Tree Classifier (`sklearn.tree.DecisionTreeClassifier`) with a maximum depth of 3 (`max_depth=3`, `random_state=42`)
+- **Split:** 80/20 train/test split (`test_size=0.20`, `random_state=42`, `stratify=y`) — 120 samples for training, 30 for testing
+- **Results:** Accuracy 96.67% (0.9667) — 29 of 30 test samples classified correctly
+Confusion matrix:
+```
+[[10, 0, 0],
+ [ 0, 9, 1],
+ [ 0, 0, 10]]
+```
+
+| Class | Precision | Recall | F1-score |
+| --- | --- | --- | --- |
+| setosa | 1.00 | 1.00 | 1.00 |
+| versicolor | 1.00 | 0.90 | 0.95 |
+| virginica | 0.91 | 1.00 | 0.95 |
+The notebook also shows the confusion matrix as a heatmap, the feature importances as a bar chart, and the decision tree itself as a plot.
+
+
 ### More projects coming
 
 New projects will be added here as they are completed, each with its own notebook and a short entry in the list above.
@@ -109,5 +133,6 @@ New projects will be added here as they are completed, each with its own noteboo
 - `XGBoost.ipynb` — XGBoost on the Breast Cancer dataset: imports, data loading, exploration, scaling, train/test split, model training, evaluation, and charts
 - `Linear_Regression.ipynb` — Linear Regression on the Diabetes dataset: imports, data loading, exploration, train/test split, model training, evaluation, and charts
 - `Logistic_Regression.ipynb` — Logistic Regression on the Breast Cancer dataset: imports, data loading, exploration, scaling, train/test split, model training, evaluation, and charts
+- `Decision_Tree_Classifier.ipynb` — Decision Tree Classifier on the Iris dataset: imports, data loading, exploration, train/test split, model training, evaluation, and charts
 - `README.md` — this collection description
 - `requirements.txt` — Python dependencies

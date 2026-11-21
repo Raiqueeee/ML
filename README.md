@@ -135,6 +135,26 @@ Confusion matrix:
 | virginica | 1.00 | 0.80 | 0.89 |
 
 The notebook also shows the confusion matrix as a heatmap and accuracy for different values of k as a line chart.
+### 7. Support Vector Machine on the Breast Cancer Dataset
+
+Predict whether a breast tumour is malignant or benign from cell nucleus measurements using an SVM with the RBF kernel.
+
+- **Notebook:** `Support_Vector_Machine.ipynb`
+- **Dataset:** Breast Cancer Wisconsin dataset, built into scikit-learn (`sklearn.datasets.load_breast_cancer`), 569 samples, 30 features (cell nucleus measurements)
+- **Algorithm:** Support Vector Machine (`sklearn.svm.SVC`) with the RBF kernel (`kernel='rbf'`, `random_state=42`), with feature scaling (`sklearn.preprocessing.StandardScaler`)
+- **Split:** 80/20 train/test split (`test_size=0.20`, `random_state=42`, `stratify=y`) — 455 samples for training, 114 for testing
+- **Results:** Accuracy 98.25% (0.9825) — 112 of 114 test samples classified correctly
+Confusion matrix:
+```
+[[41, 1],
+ [ 1, 71]]
+```
+| Class | Precision | Recall | F1-score |
+| --- | --- | --- | --- |
+| malignant | 0.98 | 0.98 | 0.98 |
+| benign | 0.99 | 0.99 | 0.99 |
+
+The notebook also shows the confusion matrix as a heatmap. The model uses 97 support vectors in total: 51 for the malignant class and 46 for the benign class.
 ### More projects coming
 
 New projects will be added here as they are completed, each with its own notebook and a short entry in the list above.
@@ -158,5 +178,6 @@ New projects will be added here as they are completed, each with its own noteboo
 - `Logistic_Regression.ipynb` — Logistic Regression on the Breast Cancer dataset: imports, data loading, exploration, scaling, train/test split, model training, evaluation, and charts
 - `Decision_Tree_Classifier.ipynb` — Decision Tree Classifier on the Iris dataset: imports, data loading, exploration, train/test split, model training, evaluation, and charts
 - `K_Nearest_Neighbors.ipynb` — K-Nearest Neighbors on the Iris dataset: imports, data loading, exploration, scaling, train/test split, model training, evaluation, and charts
+- `Support_Vector_Machine.ipynb` — Support Vector Machine on the Breast Cancer dataset: imports, data loading, exploration, scaling, train/test split, model training, evaluation, and charts
 - `README.md` — this collection description
 - `requirements.txt` — Python dependencies

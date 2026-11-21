@@ -56,6 +56,17 @@ Confusion matrix:
 
 The notebook also shows the confusion matrix as a heatmap and the feature importances as a bar chart.
 
+### 3. Linear Regression on the Diabetes Dataset
+
+Predict disease progression in diabetes patients from their measurements.
+
+- **Notebook:** `Linear_Regression.ipynb`
+- **Dataset:** Diabetes dataset, built into scikit-learn (`sklearn.datasets.load_diabetes`), 442 samples, 10 features (age, sex, body mass index, average blood pressure, and six blood serum measurements)
+- **Algorithm:** Linear Regression (`sklearn.linear_model.LinearRegression`)
+- **Split:** 80/20 train/test split (`test_size=0.20`, `random_state=42`) — 353 samples for training, 89 for testing
+- **Results:** R-squared 0.4526 — mean squared error 2900.19, root mean squared error 53.85, mean absolute error 42.79
+The notebook also shows actual vs predicted values and the residuals as charts.
+
 ### More projects coming
 
 New projects will be added here as they are completed, each with its own notebook and a short entry in the list above.
@@ -75,5 +86,6 @@ New projects will be added here as they are completed, each with its own noteboo
 
 - `Random_Forest_Classifier.ipynb` — Random Forest Classifier on the Iris dataset: imports, data loading, exploration, train/test split, model training, evaluation, and charts
 - `XGBoost.ipynb` — XGBoost on the Breast Cancer dataset: imports, data loading, exploration, scaling, train/test split, model training, evaluation, and charts
+- `Linear_Regression.ipynb` — Linear Regression on the Diabetes dataset: imports, data loading, exploration, train/test split, model training, evaluation, and charts
 - `README.md` — this collection description
 - `requirements.txt` — Python dependencies

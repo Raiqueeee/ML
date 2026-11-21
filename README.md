@@ -112,6 +112,29 @@ Confusion matrix:
 The notebook also shows the confusion matrix as a heatmap, the feature importances as a bar chart, and the decision tree itself as a plot.
 
 
+### 6. K-Nearest Neighbors on the Iris Dataset
+
+Predict the species of an iris flower from its measurements by looking at the 5 nearest training samples.
+
+- **Notebook:** `K_Nearest_Neighbors.ipynb`
+- **Dataset:** Iris dataset, built into scikit-learn (`sklearn.datasets.load_iris`), 150 samples, 4 features (sepal length, sepal width, petal length, petal width)
+- **Algorithm:** K-Nearest Neighbors (`sklearn.neighbors.KNeighborsClassifier`) with k=5 neighbours (`n_neighbors=5`), with feature scaling (`sklearn.preprocessing.StandardScaler`)
+- **Split:** 80/20 train/test split (`test_size=0.20`, `random_state=42`, `stratify=y`) — 120 samples for training, 30 for testing
+- **Results:** Accuracy 93.33% (0.9333) — 28 of 30 test samples classified correctly
+Confusion matrix:
+```
+[[10, 0, 0],
+ [ 0, 10, 0],
+ [ 0, 2, 8]]
+```
+
+| Class | Precision | Recall | F1-score |
+| --- | --- | --- | --- |
+| setosa | 1.00 | 1.00 | 1.00 |
+| versicolor | 0.83 | 1.00 | 0.91 |
+| virginica | 1.00 | 0.80 | 0.89 |
+
+The notebook also shows the confusion matrix as a heatmap and accuracy for different values of k as a line chart.
 ### More projects coming
 
 New projects will be added here as they are completed, each with its own notebook and a short entry in the list above.
@@ -134,5 +157,6 @@ New projects will be added here as they are completed, each with its own noteboo
 - `Linear_Regression.ipynb` — Linear Regression on the Diabetes dataset: imports, data loading, exploration, train/test split, model training, evaluation, and charts
 - `Logistic_Regression.ipynb` — Logistic Regression on the Breast Cancer dataset: imports, data loading, exploration, scaling, train/test split, model training, evaluation, and charts
 - `Decision_Tree_Classifier.ipynb` — Decision Tree Classifier on the Iris dataset: imports, data loading, exploration, train/test split, model training, evaluation, and charts
+- `K_Nearest_Neighbors.ipynb` — K-Nearest Neighbors on the Iris dataset: imports, data loading, exploration, scaling, train/test split, model training, evaluation, and charts
 - `README.md` — this collection description
 - `requirements.txt` — Python dependencies

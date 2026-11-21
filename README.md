@@ -1,38 +1,20 @@
-# Random Forest Classifier on the Iris Dataset
+# ML
 
-## Overview
+A collection of machine learning projects.
 
-This project trains a Random Forest Classifier to predict the species of an iris flower from its measurements. It is a beginner-friendly classification project that covers the full workflow: loading data, exploring it, splitting it into training and test sets, training a model, and evaluating the results.
+This repository brings together the machine learning projects I build, in one place. Each project is a complete, runnable notebook covering the full workflow: loading data, exploring it, preparing it, training a model, and evaluating the results.
 
-## Dataset
+## Projects
 
-The Iris dataset is built into scikit-learn (`sklearn.datasets.load_iris`).
+### 1. Random Forest Classifier on the Iris Dataset
 
-- 150 samples
-- 4 features: sepal length (cm), sepal width (cm), petal length (cm), petal width (cm)
-- 3 classes: setosa, versicolor, virginica (50 samples each)
-- No missing values
+Predict the species of an iris flower from its measurements.
 
-## Algorithm
-
-Random Forest Classifier (`sklearn.ensemble.RandomForestClassifier`) with 100 trees (`n_estimators=100`, `random_state=42`).
-
-Tree-based models do not require feature scaling, because splits are based on feature thresholds rather than distances, so no scaling was applied. The data was split into training and test sets with an 80/20 split (`test_size=0.20`, `random_state=42`, `stratify=y`): 120 samples for training and 30 for testing, with 10 samples of each class in the test set.
-
-## How to Run
-
-1. Install the dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. Open `Random_Forest_Classifier.ipynb` in Jupyter Notebook, JupyterLab, or Google Colab.
-3. Run all cells in order.
-
-## Results
-
-- **Accuracy: 90% (0.9000) — 27 of 30 test samples classified correctly**
+- **Notebook:** `Random_Forest_Classifier.ipynb`
+- **Dataset:** Iris dataset, built into scikit-learn (`sklearn.datasets.load_iris`) — 150 samples, 4 features (sepal length, sepal width, petal length, petal width), 3 classes: setosa, versicolor, virginica (50 samples each), no missing values
+- **Algorithm:** Random Forest Classifier (`sklearn.ensemble.RandomForestClassifier`) with 100 trees (`n_estimators=100`, `random_state=42`)
+- **Split:** 80/20 train/test split (`test_size=0.20`, `random_state=42`, `stratify=y`) — 120 samples for training, 30 for testing
+- **Results:** Accuracy 90% (0.9000) — 27 of 30 test samples classified correctly
 
 Confusion matrix:
 
@@ -48,12 +30,25 @@ Confusion matrix:
 | versicolor | 0.82 | 0.90 | 0.86 |
 | virginica | 0.89 | 0.80 | 0.84 |
 
-Feature importances: petal width (cm) 0.4372, petal length (cm) 0.4315, sepal length (cm) 0.1163, sepal width (cm) 0.0150. Petal measurements are the most useful features for telling the species apart.
+Feature importances: petal width (cm) 0.4372, petal length (cm) 0.4315, sepal length (cm) 0.1163, sepal width (cm) 0.0150. The notebook also shows the confusion matrix as a heatmap and the feature importances as a bar chart.
 
-The notebook also shows the confusion matrix as a heatmap and the feature importances as a bar chart.
+### More projects coming
+
+New projects will be added here as they are completed, each with its own notebook and a short entry in the list above.
+
+## How to Run
+
+1. Install the dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Open the notebook you want in Jupyter Notebook, JupyterLab, or Google Colab.
+3. Run all cells in order.
 
 ## Files
 
-- `Random_Forest_Classifier.ipynb` — the complete notebook: imports, data loading, exploration, train/test split, model training, evaluation, and charts
-- `README.md` — this project description
+- `Random_Forest_Classifier.ipynb` — Random Forest Classifier on the Iris dataset: imports, data loading, exploration, train/test split, model training, evaluation, and charts
+- `README.md` — this collection description
 - `requirements.txt` — Python dependencies
